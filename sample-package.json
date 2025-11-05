@@ -1,0 +1,23 @@
+{
+    "name": "your-directus-mcp-hackathon-submission",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "directus-mcp-hackathon"
+    ],
+    "directus:template": {
+        "name": "CMS",
+        "description": "A ready-to-use CMS with block builder, visual editing, and integration with your favorite framework. ",
+        "template": "./directus/template",
+        "frontends": {
+            "your-frontend": {
+                "name": "Your Frontend",
+                "path": "./your-frontend"
+            }
+        }
+    },
+    "author": ""
+}
