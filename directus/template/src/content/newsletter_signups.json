@@ -1,0 +1,26 @@
+[
+  {
+    "id": "0259856a-e0f2-4b64-aa8d-f5dd20154f58",
+    "status": "subscribed",
+    "email": "lisa.anderson@example.com",
+    "first_name": "Lisa",
+    "last_name": "Anderson",
+    "interests": "[\"product_updates\",\"industry_news\",\"tips_and_tricks\"]",
+    "source": "blog_sidebar",
+    "sort": null,
+    "date_created": "2025-12-11T02:15:55.730Z",
+    "date_updated": null
+  },
+  {
+    "id": "a0998613-4b87-4bda-921a-df6f52852026",
+    "status": "subscribed",
+    "email": "marcus.williams@example.com",
+    "first_name": "Marcus",
+    "last_name": "Williams",
+    "interests": "[\"product_updates\",\"case_studies\"]",
+    "source": "homepage_popup",
+    "sort": null,
+    "date_created": "2025-12-11T02:15:55.737Z",
+    "date_updated": null
+  }
+]

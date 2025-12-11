@@ -24,18 +24,5 @@
     "sort": 2,
     "date_created": "2025-12-09T14:27:42.553Z",
     "date_updated": null
-  },
-  {
-    "id": "e3e6aeba-5dd1-4f46-aee5-851a7a9b7969",
-    "status": "open",
-    "title": "Marketing Manager",
-    "department": "marketing",
-    "location": "New York, NY",
-    "employment_type": "full_time",
-    "experience_level": "senior",
-    "description": "Lead our marketing initiatives and help grow our brand. You'll develop and execute marketing strategies across multiple channels.",
-    "sort": 3,
-    "date_created": "2025-12-09T14:27:42.559Z",
-    "date_updated": null
   }
 ]

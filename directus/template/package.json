@@ -1,0 +1,11 @@
+{
+  "author": "",
+  "description": "",
+  "directusTemplate": true,
+  "files": [
+    "src"
+  ],
+  "name": "directus-template-embeddable-forms",
+  "templateName": "embeddable-forms",
+  "version": "1.0.0"
+}

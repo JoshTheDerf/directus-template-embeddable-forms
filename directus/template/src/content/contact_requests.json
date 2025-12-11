@@ -1,0 +1,38 @@
+[
+  {
+    "id": "91f5b620-254f-402e-bd16-152a07820d02",
+    "status": "new",
+    "name": "Sarah Johnson",
+    "email": "sarah.johnson@example.com",
+    "phone": "+1-555-0123",
+    "company": "TechCorp Inc",
+    "category": "sales",
+    "priority": "medium",
+    "subject": "Enterprise pricing inquiry",
+    "message": "We're interested in your enterprise plan for our team of 50+ users. Could you provide detailed pricing information and schedule a demo?",
+    "internal_notes": null,
+    "sort": null,
+    "user_created": "41454e9c-e8e0-40dc-b8f4-3a721fc513fc",
+    "date_created": "2025-12-11T02:13:53.191Z",
+    "user_updated": null,
+    "date_updated": null
+  },
+  {
+    "id": "5c97731f-fff2-475d-9021-15290a47c317",
+    "status": "in_progress",
+    "name": "Michael Chen",
+    "email": "m.chen@example.com",
+    "phone": null,
+    "company": null,
+    "category": "support",
+    "priority": "high",
+    "subject": "Integration issue with API",
+    "message": "We're experiencing authentication errors when trying to connect to your API. Getting 401 responses despite using the correct credentials.",
+    "internal_notes": "Escalated to technical team. Verified API key is valid.",
+    "sort": null,
+    "user_created": "41454e9c-e8e0-40dc-b8f4-3a721fc513fc",
+    "date_created": "2025-12-11T02:13:53.197Z",
+    "user_updated": null,
+    "date_updated": null
+  }
+]

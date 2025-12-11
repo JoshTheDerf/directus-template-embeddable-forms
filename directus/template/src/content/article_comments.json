@@ -28,35 +28,5 @@
     "sort": null,
     "date_created": "2025-12-09T01:16:47.954Z",
     "date_updated": null
-  },
-  {
-    "id": "180a9440-3448-407a-9ddf-f48c00bf3903",
-    "article_title": "Building Secure APIs with Node.js",
-    "author_name": "Mike Rodriguez",
-    "author_email": "mike.r@example.com",
-    "author_website": null,
-    "comment_body": "Would love to see a follow-up article covering:\n\n- Rate limiting strategies\n- JWT token refresh patterns\n- Database connection pooling\n\nKeep up the great work! 👍",
-    "parent_comment": null,
-    "status": "pending",
-    "ip_address": null,
-    "user_agent": null,
-    "sort": null,
-    "date_created": "2025-12-09T01:16:47.957Z",
-    "date_updated": null
-  },
-  {
-    "id": "6521e920-27a9-42e2-aee4-de03ec7b3cf6",
-    "article_title": "Building Secure APIs with Node.js",
-    "author_name": "Article Author",
-    "author_email": null,
-    "author_website": null,
-    "comment_body": "@Sarah - **Great catch!** You're absolutely right. 🎯\n\nI've updated the article to include proper error handling. The `try/catch` pattern you suggested is the recommended approach.\n\nAlso added a section on:\n- Custom error classes\n- Logging best practices\n- Graceful degradation\n\nThanks for the feedback!",
-    "parent_comment": "93228232-42b8-42c0-bb23-94ae8d57c6fa",
-    "status": "published",
-    "ip_address": null,
-    "user_agent": null,
-    "sort": null,
-    "date_created": "2025-12-09T01:16:54.675Z",
-    "date_updated": null
   }
 ]

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "889d0573-125b-415e-9468-dee049fca906",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "889d0573-125b-415e-9468-dee049fca906",
+      "folder": "b5daa243-2352-4aa6-a5ea-76b8b7d7fba6",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/.registry/b5daa243-2352-4aa6-a5ea-76b8b7d7fba6",
+      "name": "directus-extension-embeddable-forms",
+      "version": "1.0.0",
+      "type": "module",
+      "entrypoint": "dist/index.js",
+      "host": "^11.0.0",
+      "local": true
+    }
+  },
+  {
+    "id": "e7500a18-a256-47d5-b3c4-b9e9a29e72d7",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "e7500a18-a256-47d5-b3c4-b9e9a29e72d7",
+      "folder": "3a42112f-7e4e-4404-be1b-1996bc8b450e",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/.registry/3a42112f-7e4e-4404-be1b-1996bc8b450e",
+      "name": "dirserve",
+      "version": "0.0.1",
+      "type": "endpoint",
+      "entrypoint": "dist/index.js",
+      "host": "^10.10.0",
+      "sandbox": {
+        "enabled": true,
+        "requestedScopes": {
+          "request": {
+            "urls": [
+              "https://*",
+              "http://*"
+            ],
+            "methods": [
+              "GET"
+            ]
+          },
+          "log": {}
+        }
+      },
+      "local": true
+    }
+  }
+]

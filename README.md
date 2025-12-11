@@ -28,10 +28,6 @@ This also demonstrates Directus's flexibility—both frontend and backend can be
 - Directus (data platform and admin interface)
 - Custom Directus module extension for form rendering
 
-**Frontend**
-- Vue 3 (Directus admin app framework)
-- PostMessage API for iframe communication
-
 **Development Tools**
 - Directus MCP (Model Context Protocol for AI-assisted development)
 - Claude Code (AI coding assistant)
@@ -41,10 +37,50 @@ This also demonstrates Directus's flexibility—both frontend and backend can be
 
 ### Prerequisites
 
-- Directus instance (v10+)
-- Node.js installed locally
+- Docker and Docker Compose (for local development)
+- Node.js (for template installation on existing instances)
+- Directus instance (v10+) or use the included Docker setup
 
-### Installation
+### Local Development
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/directus-template-embeddable-forms.git
+cd directus-template-embeddable-forms/directus
+```
+
+2. Copy the environment file:
+
+```bash
+cp .env.example .env
+```
+
+3. Start Directus with Docker:
+
+```bash
+docker compose up -d
+```
+
+4. Install the template:
+
+```bash
+npx directus-template-cli@latest apply -h localhost -p 8055 -e admin@example.com -P d1r3ctu5 ../template
+```
+
+5. Restart the container to load extensions:
+
+```bash
+docker compose restart
+```
+
+6. Access Directus:
+   - Admin: `http://localhost:8055`
+   - Demos: `http://localhost:8055/dirserve/index.html`
+
+Default credentials: `admin@example.com` / `d1r3ctu5`
+
+### Installation on Existing Instance
 
 1. Install the template using Directus template CLI:
 

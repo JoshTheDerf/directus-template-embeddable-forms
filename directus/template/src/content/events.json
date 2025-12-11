@@ -1,0 +1,28 @@
+[
+  {
+    "id": "b27874e6-24f4-4488-b81d-afcb6136a44f",
+    "status": "open",
+    "title": "Annual Tech Conference 2024",
+    "description": "Join us for our flagship technology conference featuring keynotes, workshops, and networking opportunities.",
+    "event_type": "conference",
+    "event_date": "2024-09-15T09:00:00.000Z",
+    "location": "Convention Center, San Francisco",
+    "capacity": 500,
+    "sort": null,
+    "date_created": "2025-12-09T14:14:05.114Z",
+    "date_updated": null
+  },
+  {
+    "id": "8f728991-e2cd-46c6-beb1-fd902ad555fd",
+    "status": "upcoming",
+    "title": "Digital Marketing Workshop 2025",
+    "description": "Learn cutting-edge digital marketing strategies including SEO, content marketing, social media advertising, and analytics. Perfect for marketing professionals and business owners.",
+    "event_type": "workshop",
+    "event_date": "2025-03-15T14:00:00.000Z",
+    "location": "Innovation Hub, 456 Tech Street, San Francisco, CA",
+    "capacity": 50,
+    "sort": null,
+    "date_created": "2025-12-11T02:14:26.163Z",
+    "date_updated": null
+  }
+]
