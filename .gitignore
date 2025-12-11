@@ -1,5 +1,6 @@
 # Directus Specific
-directus/data/
+directus/database/*.db
+directus/database/*.db-*
 directus/uploads/
 directus/extensions/.registry
 

@@ -1,0 +1,28 @@
+[
+  {
+    "id": "7f51f57b-fcee-45d5-ac40-9d8782bdc0c2",
+    "company_name": "Green Earth Organics",
+    "contact_person": "Lisa Chang",
+    "email": "lisa@greenearth.com",
+    "phone": "+1-555-0198",
+    "service_type": "mobile",
+    "budget_range": "5k_15k",
+    "project_description": "Need a mobile app for our farm-to-table delivery service. Customers should be able to browse products, place orders, and track deliveries.",
+    "timeline": "1_3_months",
+    "status": "new",
+    "date_created": "2025-12-09T00:44:43.135Z"
+  },
+  {
+    "id": "9f839c49-cf5a-4698-88d9-6186f5bdd72d",
+    "company_name": "TechStart Solutions",
+    "contact_person": "David Martinez",
+    "email": "david@techstart.io",
+    "phone": "+1-555-0123",
+    "service_type": "web",
+    "budget_range": "15k_50k",
+    "project_description": "We need a complete redesign of our company website with an integrated CMS, customer portal, and payment processing. Looking for a modern, responsive design that works well on mobile devices.",
+    "timeline": "3_6_months",
+    "status": "reviewing",
+    "date_created": "2025-12-09T00:44:43.131Z"
+  }
+]

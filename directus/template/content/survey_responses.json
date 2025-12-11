@@ -1,0 +1,32 @@
+[
+  {
+    "id": "21ba7f15-e9d9-4ada-b26a-73922738515d",
+    "survey_name": "Product Launch Feedback",
+    "respondent_email": null,
+    "satisfaction_rating": 4,
+    "would_recommend": 1,
+    "feedback": "Really like the new features! The interface is intuitive and easy to use.",
+    "improvement_suggestions": "Would love to see mobile app support in the future.",
+    "date_submitted": "2025-12-09T00:44:35.946Z"
+  },
+  {
+    "id": "a6f67070-2a8f-42cd-bc5d-f15a30d7261f",
+    "survey_name": "Q4 Customer Satisfaction Survey",
+    "respondent_email": "customer1@example.com",
+    "satisfaction_rating": 5,
+    "would_recommend": 1,
+    "feedback": "Excellent service! The team was very responsive and helpful throughout the entire process.",
+    "improvement_suggestions": "Maybe add more documentation for self-service options.",
+    "date_submitted": "2025-12-09T00:44:35.939Z"
+  },
+  {
+    "id": "eb44a31e-8e2a-44eb-89e6-d16e90110c28",
+    "survey_name": "Q4 Customer Satisfaction Survey",
+    "respondent_email": "customer2@example.com",
+    "satisfaction_rating": 3,
+    "would_recommend": 0,
+    "feedback": "The product is good but support response times could be better.",
+    "improvement_suggestions": "Improve response times for support tickets, especially for urgent issues.",
+    "date_submitted": "2025-12-09T00:44:35.943Z"
+  }
+]

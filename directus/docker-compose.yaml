@@ -1,32 +1,5 @@
-name: directus-mcp-hackathon-submission
+name: directus-embeddable-forms-template
 services:
-  database:
-    image: postgis/postgis:16-master
-    platform: linux/amd64
-    volumes:
-      - ./data/database:/var/lib/postgresql/data
-    environment:
-      POSTGRES_USER: ${DB_USER}
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
-      POSTGRES_DB: ${DB_DATABASE}
-    healthcheck:
-      test: ['CMD', 'pg_isready', '-U', '${DB_USER}', '-d', '${DB_DATABASE}', '-h', 'localhost']
-      interval: 10s
-      timeout: 5s
-      retries: 5
-      start_interval: 5s
-      start_period: 30s
-
-  cache:
-    image: redis:6
-    healthcheck:
-      test: ['CMD-SHELL', "[ $$(redis-cli ping) = 'PONG' ]"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-      start_interval: 5s
-      start_period: 30s
-
   directus:
     image: directus/directus:11.13.0
     ports:
@@ -34,25 +7,12 @@ services:
     volumes:
       - ./uploads:/directus/uploads
       - ./extensions:/directus/extensions
-    depends_on:
-      database:
-        condition: service_healthy
-      cache:
-        condition: service_healthy
+      - ./database:/directus/database
     environment:
       SECRET: ${DIRECTUS_SECRET}
 
-      DB_CLIENT: 'pg'
-      DB_HOST: 'database'
-      DB_PORT: '5432'
-      DB_DATABASE: ${DB_DATABASE}
-      DB_USER: ${DB_USER}
-      DB_PASSWORD: ${DB_PASSWORD}
-
-      CACHE_ENABLED: ${CACHE_ENABLED}
-      CACHE_AUTO_PURGE: ${CACHE_AUTO_PURGE}
-      CACHE_STORE: 'redis'
-      REDIS: 'redis://cache:6379'
+      DB_CLIENT: 'sqlite3'
+      DB_FILENAME: '/directus/database/data.db'
 
       ADMIN_EMAIL: ${ADMIN_EMAIL}
       ADMIN_PASSWORD: ${ADMIN_PASSWORD}
@@ -77,6 +37,7 @@ services:
       EXTENSIONS_ROLLDOWN: ${EXTENSIONS_ROLLDOWN}
 
       CONTENT_SECURITY_POLICY_DIRECTIVES__FRAME_SRC: ${CONTENT_SECURITY_POLICY_DIRECTIVES__FRAME_SRC}
+      CONTENT_SECURITY_POLICY_DIRECTIVES__FRAME_ANCESTORS: ${CONTENT_SECURITY_POLICY_DIRECTIVES__FRAME_ANCESTORS}
 
       EMAIL_TRANSPORT: ${EMAIL_TRANSPORT}
       EMAIL_FROM: ${EMAIL_FROM}

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "ab7098dc-74cd-4be1-af76-6d3065f578a8",
+    "role": "19a23c9d-bc03-483c-a52f-596596a96070",
+    "user": null,
+    "policy": "5e200916-05a7-4e82-9004-e12412dab56e",
+    "sort": null
+  },
+  {
+    "id": "a69de064-dba5-4496-9db3-e63d89ec2d29",
+    "role": null,
+    "user": null,
+    "policy": "43750634-e370-44ad-88b5-c4c3dd148722",
+    "sort": null
+  },
+  {
+    "id": "8c2eeec2-598a-4455-911d-f573e0e9b370",
+    "role": null,
+    "user": null,
+    "policy": "19673593-8a25-43b9-be3d-8a453a296c5b",
+    "sort": null
+  },
+  {
+    "id": "ada8bbe0-476c-463c-8300-0a8be54be32e",
+    "role": null,
+    "user": null,
+    "policy": "755e1163-03f6-446c-b2e2-a0a840349070",
+    "sort": null
+  },
+  {
+    "id": "9c454fdf-59f6-4145-a278-da6fdd523fc2",
+    "role": null,
+    "user": null,
+    "policy": "c6b84b5c-ed5a-4112-941a-7faea727a073",
+    "sort": null
+  },
+  {
+    "id": "94dc2af5-9f1b-44ef-913a-7588119df266",
+    "role": null,
+    "user": null,
+    "policy": "85484376-10a7-4f4f-b9ea-d1794b4d72ee",
+    "sort": null
+  },
+  {
+    "id": "85e9e686-ae18-4744-8302-828921957807",
+    "role": null,
+    "user": null,
+    "policy": "9695442d-e956-4ab5-aa46-6aeca1bfd46a",
+    "sort": null
+  },
+  {
+    "id": "d05aeb15-c6bd-4981-a4e1-49ea15672f7f",
+    "role": null,
+    "user": null,
+    "policy": "b3eb39c8-a7ac-4da5-8c92-3f7fe89e0243",
+    "sort": null
+  },
+  {
+    "id": "b7e93c39-5d75-48c6-b9d9-2e377ab0f58c",
+    "role": null,
+    "user": null,
+    "policy": "cf8ba3c4-6921-42a4-8de1-72e293ecbaa9",
+    "sort": null
+  },
+  {
+    "id": "c2472210-63ff-47df-85be-e7914dd94f8a",
+    "role": null,
+    "user": null,
+    "policy": "ed85b924-d5ec-43c6-831c-db109e30d95f",
+    "sort": null
+  },
+  {
+    "id": "a3d8de32-3b8c-4efb-a94b-4c5be6143e33",
+    "role": null,
+    "user": null,
+    "policy": "c67a9bd2-6bc4-485c-9ea5-e79318f04163",
+    "sort": null
+  },
+  {
+    "id": "ffc5ec02-f79c-49ea-84f2-4e91deebdd53",
+    "role": null,
+    "user": null,
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17",
+    "sort": null
+  }
+]

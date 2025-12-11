@@ -1,0 +1,41 @@
+[
+  {
+    "id": "fac3dceb-28b8-472e-8868-7dbdb41a7f33",
+    "status": "open",
+    "title": "Senior Full Stack Developer",
+    "department": "engineering",
+    "location": "Remote",
+    "employment_type": "full_time",
+    "experience_level": "senior",
+    "description": "We're looking for an experienced full stack developer to join our engineering team. You'll work on building scalable web applications using modern frameworks and technologies.",
+    "sort": 1,
+    "date_created": "2025-12-09T14:27:42.547Z",
+    "date_updated": null
+  },
+  {
+    "id": "a52f4b6a-8ba0-488f-b7a7-0bfa4e2e1265",
+    "status": "open",
+    "title": "Product Designer",
+    "department": "design",
+    "location": "San Francisco, CA",
+    "employment_type": "full_time",
+    "experience_level": "mid",
+    "description": "Join our design team to create beautiful and intuitive user experiences. You'll work closely with product managers and engineers to bring ideas to life.",
+    "sort": 2,
+    "date_created": "2025-12-09T14:27:42.553Z",
+    "date_updated": null
+  },
+  {
+    "id": "e3e6aeba-5dd1-4f46-aee5-851a7a9b7969",
+    "status": "open",
+    "title": "Marketing Manager",
+    "department": "marketing",
+    "location": "New York, NY",
+    "employment_type": "full_time",
+    "experience_level": "senior",
+    "description": "Lead our marketing initiatives and help grow our brand. You'll develop and execute marketing strategies across multiple channels.",
+    "sort": 3,
+    "date_created": "2025-12-09T14:27:42.559Z",
+    "date_updated": null
+  }
+]

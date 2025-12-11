@@ -1,0 +1,62 @@
+[
+  {
+    "id": "42176463-7950-4a98-b0ea-225ab1b340c8",
+    "article_title": "Building Secure APIs with Node.js",
+    "author_name": "Alex Thompson",
+    "author_email": "alex.t@devmail.com",
+    "author_website": "https://alexcodes.dev",
+    "comment_body": "# Great Article!\n\nThis is **exactly** what I was looking for. The section on *best practices* was particularly helpful.\n\n## Key Takeaways\n\n1. Always validate user input\n2. Use environment variables for secrets\n3. Implement proper error handling\n\nThanks for sharing! 🎉",
+    "parent_comment": null,
+    "status": "published",
+    "ip_address": null,
+    "user_agent": null,
+    "sort": null,
+    "date_created": "2025-12-09T01:16:47.950Z",
+    "date_updated": null
+  },
+  {
+    "id": "93228232-42b8-42c0-bb23-94ae8d57c6fa",
+    "article_title": "Building Secure APIs with Node.js",
+    "author_name": "Sarah Chen",
+    "author_email": "sarah@techstartup.io",
+    "author_website": null,
+    "comment_body": "I have a question about the code example in **Step 3**:\n\n```javascript\nconst result = await fetchData();\nconsole.log(result);\n```\n\nShouldn't we add error handling here? Something like:\n\n```javascript\ntry {\n  const result = await fetchData();\n  console.log(result);\n} catch (error) {\n  console.error('Failed to fetch:', error);\n}\n```\n\nWhat do you think?",
+    "parent_comment": null,
+    "status": "published",
+    "ip_address": null,
+    "user_agent": null,
+    "sort": null,
+    "date_created": "2025-12-09T01:16:47.954Z",
+    "date_updated": null
+  },
+  {
+    "id": "180a9440-3448-407a-9ddf-f48c00bf3903",
+    "article_title": "Building Secure APIs with Node.js",
+    "author_name": "Mike Rodriguez",
+    "author_email": "mike.r@example.com",
+    "author_website": null,
+    "comment_body": "Would love to see a follow-up article covering:\n\n- Rate limiting strategies\n- JWT token refresh patterns\n- Database connection pooling\n\nKeep up the great work! 👍",
+    "parent_comment": null,
+    "status": "pending",
+    "ip_address": null,
+    "user_agent": null,
+    "sort": null,
+    "date_created": "2025-12-09T01:16:47.957Z",
+    "date_updated": null
+  },
+  {
+    "id": "6521e920-27a9-42e2-aee4-de03ec7b3cf6",
+    "article_title": "Building Secure APIs with Node.js",
+    "author_name": "Article Author",
+    "author_email": null,
+    "author_website": null,
+    "comment_body": "@Sarah - **Great catch!** You're absolutely right. 🎯\n\nI've updated the article to include proper error handling. The `try/catch` pattern you suggested is the recommended approach.\n\nAlso added a section on:\n- Custom error classes\n- Logging best practices\n- Graceful degradation\n\nThanks for the feedback!",
+    "parent_comment": "93228232-42b8-42c0-bb23-94ae8d57c6fa",
+    "status": "published",
+    "ip_address": null,
+    "user_agent": null,
+    "sort": null,
+    "date_created": "2025-12-09T01:16:54.675Z",
+    "date_updated": null
+  }
+]

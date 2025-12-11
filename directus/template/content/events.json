@@ -1,0 +1,15 @@
+[
+  {
+    "id": "b27874e6-24f4-4488-b81d-afcb6136a44f",
+    "status": "open",
+    "title": "Annual Tech Conference 2024",
+    "description": "Join us for our flagship technology conference featuring keynotes, workshops, and networking opportunities.",
+    "event_type": "conference",
+    "event_date": "2024-09-15T09:00:00.000Z",
+    "location": "Convention Center, San Francisco",
+    "capacity": 500,
+    "sort": null,
+    "date_created": "2025-12-09T14:14:05.114Z",
+    "date_updated": null
+  }
+]

@@ -1,18 +1,27 @@
 {
-    "name": "your-directus-mcp-hackathon-submission",
-    "version": "1.0.0",
-    "description": "",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [
-        "directus-mcp-hackathon"
-    ],
-    "directus:template": {
-        "name": "Your Directus MCP Hackathon Submission",
-        "description": "Add your description here",
-        "template": null,
-        "frontends": null
-    },
-    "author": ""
+  "name": "directus-template-embeddable-forms",
+  "version": "1.0.0",
+  "description": "Create public, embeddable forms for any Directus collection with prefill support, iframe communication, and full interface support. Perfect for contact forms, lead capture, event registrations, and more.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "directus:template": {
+    "name": "Embeddable Forms",
+    "description": "Create public, embeddable forms for any Directus collection with prefill support, iframe communication, and full interface support. Perfect for contact forms, lead capture, event registrations, and more.",
+    "template": "./directus/template",
+    "frontends": null
+  },
+  "keywords": [
+    "directus",
+    "forms",
+    "embed",
+    "template",
+    "public-forms",
+    "lead-capture",
+    "contact-form",
+    "iframe",
+    "prefill"
+  ],
+  "author": "Joshua Bemenderfer",
+  "license": "MIT"
 }

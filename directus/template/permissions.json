@@ -1,0 +1,614 @@
+[
+  {
+    "collection": "directus_fields",
+    "action": "read",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17"
+  },
+  {
+    "collection": "directus_collections",
+    "action": "read",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17"
+  },
+  {
+    "collection": "directus_relations",
+    "action": "read",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17"
+  },
+  {
+    "collection": "contact_requests",
+    "action": "create",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17"
+  },
+  {
+    "collection": "job_applications",
+    "action": "create",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17"
+  },
+  {
+    "collection": "job_postings",
+    "action": "read",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17"
+  },
+  {
+    "collection": "lead_captures",
+    "action": "create",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17"
+  },
+  {
+    "collection": "newsletter_signups",
+    "action": "create",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17"
+  },
+  {
+    "collection": "newsletter_signups",
+    "action": "read",
+    "permissions": {
+      "_and": [
+        {
+          "id": {
+            "_null": true
+          }
+        }
+      ]
+    },
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "id",
+      "email",
+      "first_name",
+      "last_name",
+      "interests"
+    ],
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17"
+  },
+  {
+    "collection": "lead_captures",
+    "action": "read",
+    "permissions": {
+      "_and": [
+        {
+          "id": {
+            "_null": true
+          }
+        }
+      ]
+    },
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "id",
+      "first_name",
+      "last_name",
+      "email",
+      "phone",
+      "company",
+      "job_title",
+      "company_size",
+      "industry",
+      "interest",
+      "message"
+    ],
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17"
+  },
+  {
+    "collection": "job_applications",
+    "action": "read",
+    "permissions": {
+      "_and": [
+        {
+          "id": {
+            "_null": true
+          }
+        }
+      ]
+    },
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "id",
+      "job_posting",
+      "first_name",
+      "last_name",
+      "email",
+      "phone",
+      "resume",
+      "cover_letter",
+      "linkedin_url",
+      "portfolio_url",
+      "years_of_experience",
+      "current_company",
+      "expected_salary",
+      "available_start_date",
+      "how_did_you_hear",
+      "additional_info"
+    ],
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17"
+  },
+  {
+    "collection": "contact_requests",
+    "action": "read",
+    "permissions": {
+      "_and": [
+        {
+          "id": {
+            "_null": true
+          }
+        }
+      ]
+    },
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "id",
+      "name",
+      "email",
+      "phone",
+      "company",
+      "category",
+      "priority",
+      "subject",
+      "message"
+    ],
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17"
+  },
+  {
+    "collection": "event_registrations",
+    "action": "read",
+    "permissions": {
+      "_and": [
+        {
+          "id": {
+            "_null": true
+          }
+        }
+      ]
+    },
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "ticket_type",
+      "first_name",
+      "last_name",
+      "email",
+      "phone",
+      "company",
+      "job_title",
+      "dietary_requirements",
+      "special_requests",
+      "event"
+    ],
+    "policy": "43750634-e370-44ad-88b5-c4c3dd148722"
+  },
+  {
+    "collection": "event_registrations",
+    "action": "create",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "43750634-e370-44ad-88b5-c4c3dd148722"
+  },
+  {
+    "collection": "events",
+    "action": "read",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "43750634-e370-44ad-88b5-c4c3dd148722"
+  },
+  {
+    "collection": "directus_collections",
+    "action": "read",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "19673593-8a25-43b9-be3d-8a453a296c5b"
+  },
+  {
+    "collection": "directus_fields",
+    "action": "read",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "19673593-8a25-43b9-be3d-8a453a296c5b"
+  },
+  {
+    "collection": "directus_relations",
+    "action": "read",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "19673593-8a25-43b9-be3d-8a453a296c5b"
+  },
+  {
+    "collection": "quote_requests",
+    "action": "create",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "755e1163-03f6-446c-b2e2-a0a840349070"
+  },
+  {
+    "collection": "quote_requests",
+    "action": "read",
+    "permissions": {
+      "_and": [
+        {
+          "id": {
+            "_null": true
+          }
+        }
+      ]
+    },
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "company_name",
+      "contact_person",
+      "email",
+      "phone",
+      "service_type",
+      "budget_range",
+      "project_description",
+      "timeline"
+    ],
+    "policy": "755e1163-03f6-446c-b2e2-a0a840349070"
+  },
+  {
+    "collection": "support_tickets",
+    "action": "create",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "c6b84b5c-ed5a-4112-941a-7faea727a073"
+  },
+  {
+    "collection": "support_tickets",
+    "action": "read",
+    "permissions": {
+      "_and": [
+        {
+          "id": {
+            "_null": true
+          }
+        }
+      ]
+    },
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "customer_name",
+      "customer_email",
+      "priority",
+      "category",
+      "subject",
+      "description"
+    ],
+    "policy": "c6b84b5c-ed5a-4112-941a-7faea727a073"
+  },
+  {
+    "collection": "survey_responses",
+    "action": "create",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "85484376-10a7-4f4f-b9ea-d1794b4d72ee"
+  },
+  {
+    "collection": "survey_responses",
+    "action": "read",
+    "permissions": {
+      "_and": [
+        {
+          "id": {
+            "_null": true
+          }
+        }
+      ]
+    },
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "survey_name",
+      "respondent_email",
+      "satisfaction_rating",
+      "would_recommend",
+      "feedback",
+      "improvement_suggestions"
+    ],
+    "policy": "85484376-10a7-4f4f-b9ea-d1794b4d72ee"
+  },
+  {
+    "collection": "article_comments",
+    "action": "create",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "9695442d-e956-4ab5-aa46-6aeca1bfd46a"
+  },
+  {
+    "collection": "article_comments",
+    "action": "read",
+    "permissions": {
+      "_and": [
+        {
+          "id": {
+            "_null": true
+          }
+        }
+      ]
+    },
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "article_title",
+      "author_name",
+      "author_email",
+      "author_website",
+      "comment_body",
+      "parent_comment"
+    ],
+    "policy": "9695442d-e956-4ab5-aa46-6aeca1bfd46a"
+  },
+  {
+    "collection": "contact_requests",
+    "action": "create",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "b3eb39c8-a7ac-4da5-8c92-3f7fe89e0243"
+  },
+  {
+    "collection": "contact_requests",
+    "action": "read",
+    "permissions": {
+      "_and": [
+        {
+          "id": {
+            "_null": true
+          }
+        }
+      ]
+    },
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "name",
+      "email",
+      "phone",
+      "company",
+      "category",
+      "priority",
+      "subject",
+      "message"
+    ],
+    "policy": "b3eb39c8-a7ac-4da5-8c92-3f7fe89e0243"
+  },
+  {
+    "collection": "job_applications",
+    "action": "create",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "cf8ba3c4-6921-42a4-8de1-72e293ecbaa9"
+  },
+  {
+    "collection": "job_applications",
+    "action": "read",
+    "permissions": {
+      "_and": [
+        {
+          "id": {
+            "_null": true
+          }
+        }
+      ]
+    },
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "job_posting",
+      "first_name",
+      "last_name",
+      "email",
+      "phone",
+      "resume",
+      "cover_letter",
+      "linkedin_url",
+      "portfolio_url",
+      "years_of_experience",
+      "current_company",
+      "expected_salary",
+      "available_start_date",
+      "how_did_you_hear",
+      "additional_info"
+    ],
+    "policy": "cf8ba3c4-6921-42a4-8de1-72e293ecbaa9"
+  },
+  {
+    "collection": "job_postings",
+    "action": "read",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "cf8ba3c4-6921-42a4-8de1-72e293ecbaa9"
+  },
+  {
+    "collection": "lead_captures",
+    "action": "create",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "ed85b924-d5ec-43c6-831c-db109e30d95f"
+  },
+  {
+    "collection": "lead_captures",
+    "action": "read",
+    "permissions": {
+      "_and": [
+        {
+          "id": {
+            "_null": true
+          }
+        }
+      ]
+    },
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "first_name",
+      "last_name",
+      "email",
+      "phone",
+      "company",
+      "job_title",
+      "company_size",
+      "industry",
+      "interest",
+      "message"
+    ],
+    "policy": "ed85b924-d5ec-43c6-831c-db109e30d95f"
+  },
+  {
+    "collection": "newsletter_signups",
+    "action": "create",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "c67a9bd2-6bc4-485c-9ea5-e79318f04163"
+  },
+  {
+    "collection": "newsletter_signups",
+    "action": "read",
+    "permissions": {
+      "_and": [
+        {
+          "id": {
+            "_null": true
+          }
+        }
+      ]
+    },
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "email",
+      "first_name",
+      "last_name",
+      "interests"
+    ],
+    "policy": "c67a9bd2-6bc4-485c-9ea5-e79318f04163"
+  },
+  {
+    "collection": "directus_files",
+    "action": "read",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17"
+  },
+  {
+    "collection": "directus_folders",
+    "action": "read",
+    "permissions": null,
+    "validation": null,
+    "presets": null,
+    "fields": [
+      "*"
+    ],
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17"
+  }
+]

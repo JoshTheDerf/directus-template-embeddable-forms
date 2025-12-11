@@ -1,0 +1,252 @@
+[
+  {
+    "collection": "contact_requests",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "table": "contact_requests",
+      "column": "user_updated",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION",
+      "constraint_name": null
+    },
+    "meta": {
+      "many_collection": "contact_requests",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "contact_requests",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "table": "contact_requests",
+      "column": "user_created",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION",
+      "constraint_name": null
+    },
+    "meta": {
+      "many_collection": "contact_requests",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "event_registrations",
+    "field": "event",
+    "related_collection": "events",
+    "schema": {
+      "table": "event_registrations",
+      "column": "event",
+      "foreign_key_table": "events",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE",
+      "constraint_name": null
+    },
+    "meta": {
+      "many_collection": "event_registrations",
+      "many_field": "event",
+      "one_collection": "events",
+      "one_field": "registrations",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "job_applications",
+    "field": "cover_letter",
+    "related_collection": "directus_files",
+    "schema": {
+      "table": "job_applications",
+      "column": "cover_letter",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL",
+      "constraint_name": null
+    },
+    "meta": {
+      "many_collection": "job_applications",
+      "many_field": "cover_letter",
+      "one_collection": "directus_files",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "job_applications",
+    "field": "resume",
+    "related_collection": "directus_files",
+    "schema": {
+      "table": "job_applications",
+      "column": "resume",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL",
+      "constraint_name": null
+    },
+    "meta": {
+      "many_collection": "job_applications",
+      "many_field": "resume",
+      "one_collection": "directus_files",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "job_applications",
+    "field": "job_posting",
+    "related_collection": "job_postings",
+    "schema": {
+      "table": "job_applications",
+      "column": "job_posting",
+      "foreign_key_table": "job_postings",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE",
+      "constraint_name": null
+    },
+    "meta": {
+      "many_collection": "job_applications",
+      "many_field": "job_posting",
+      "one_collection": "job_postings",
+      "one_field": "applications",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lead_captures",
+    "field": "assigned_to",
+    "related_collection": "directus_users",
+    "schema": {
+      "table": "lead_captures",
+      "column": "assigned_to",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL",
+      "constraint_name": null
+    },
+    "meta": {
+      "many_collection": "lead_captures",
+      "many_field": "assigned_to",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lead_captures",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "table": "lead_captures",
+      "column": "user_updated",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION",
+      "constraint_name": null
+    },
+    "meta": {
+      "many_collection": "lead_captures",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lead_captures",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "table": "lead_captures",
+      "column": "user_created",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION",
+      "constraint_name": null
+    },
+    "meta": {
+      "many_collection": "lead_captures",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "article_comments",
+    "field": "parent_comment",
+    "related_collection": "article_comments",
+    "schema": {
+      "table": "article_comments",
+      "column": "parent_comment",
+      "foreign_key_table": "article_comments",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL",
+      "constraint_name": null
+    },
+    "meta": {
+      "many_collection": "article_comments",
+      "many_field": "parent_comment",
+      "one_collection": "article_comments",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  }
+]

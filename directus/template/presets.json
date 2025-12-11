@@ -1,0 +1,122 @@
+[
+  {
+    "bookmark": "High Priority Tickets",
+    "user": null,
+    "role": null,
+    "collection": "support_tickets",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": null,
+    "layout_options": null,
+    "refresh_interval": null,
+    "filter": {
+      "_and": [
+        {
+          "priority": {
+            "_in": [
+              "high",
+              "urgent"
+            ]
+          }
+        },
+        {
+          "status": {
+            "_nin": [
+              "resolved",
+              "closed"
+            ]
+          }
+        }
+      ]
+    },
+    "icon": "priority_high",
+    "color": "#EF4444"
+  },
+  {
+    "bookmark": "Positive Reviews",
+    "user": null,
+    "role": null,
+    "collection": "survey_responses",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": null,
+    "layout_options": null,
+    "refresh_interval": null,
+    "filter": {
+      "satisfaction_rating": {
+        "_gte": 4
+      }
+    },
+    "icon": "thumb_up",
+    "color": "#10B981"
+  },
+  {
+    "bookmark": "Hot Leads",
+    "user": null,
+    "role": null,
+    "collection": "quote_requests",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": null,
+    "layout_options": null,
+    "refresh_interval": null,
+    "filter": {
+      "_and": [
+        {
+          "status": {
+            "_in": [
+              "new",
+              "reviewing"
+            ]
+          }
+        },
+        {
+          "budget_range": {
+            "_in": [
+              "15k_50k",
+              "over_50k"
+            ]
+          }
+        }
+      ]
+    },
+    "icon": "local_fire_department",
+    "color": "#F59E0B"
+  },
+  {
+    "bookmark": "Published Comments",
+    "user": null,
+    "role": null,
+    "collection": "article_comments",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": null,
+    "layout_options": null,
+    "refresh_interval": null,
+    "filter": {
+      "status": {
+        "_eq": "published"
+      }
+    },
+    "icon": "check_circle",
+    "color": "#10B981"
+  },
+  {
+    "bookmark": "Pending Moderation",
+    "user": null,
+    "role": null,
+    "collection": "article_comments",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": null,
+    "layout_options": null,
+    "refresh_interval": null,
+    "filter": {
+      "status": {
+        "_eq": "pending"
+      }
+    },
+    "icon": "pending",
+    "color": "#FFA439"
+  }
+]

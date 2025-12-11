@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💼 Job Application</title>
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .header h1 {
+    margin: 0 0 10px 0;
+    color: #2d3748;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  .header p {
+    margin: 0;
+    color: #718096;
+    font-size: 16px;
+  }
+
+  .nav {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+
+  .nav a:hover {
+    color: #764ba2;
+  }
+
+  .form-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  #directus-form-iframe {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+  }
+
+  #form-status {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+
+  #form-status.success {
+    background: #c6f6d5;
+    color: #22543d;
+    border: 1px solid #9ae6b4;
+  }
+
+  #form-status.error {
+    background: #fed7d7;
+    color: #742a2a;
+    border: 1px solid #fc8181;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-icon {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+
+  .card h2 {
+    margin: 0 0 10px 0;
+    color: #2d3748;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .card p {
+    margin: 0;
+    color: #718096;
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+
+    .header {
+      padding: 15px;
+    }
+
+    .header h1 {
+      font-size: 22px;
+    }
+
+    .header p {
+      font-size: 14px;
+    }
+
+    .form-card {
+      padding: 20px;
+    }
+
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="index.html">← Back to All Forms</a>
+    </div>
+
+    <div class="header">
+      <h1>💼 Job Application</h1>
+      <p>Join our team - apply for open positions</p>
+    </div>
+
+    
+    <div class="form-card" style="margin-bottom: 20px; padding: 15px; background: #e0f2fe; border-left: 4px solid #0284c7;">
+      <strong>📝 Demo Note:</strong> This form prefills multiple fields via query parameters: job_posting (UUID relation), how_did_you_hear, and years_of_experience. Try changing <code>?job=&lt;uuid&gt;&source=linkedin</code> in the URL!
+    </div>
+    
+
+    <div class="form-card">
+      <iframe
+        src="https://directus-demo.thederf.com/admin/forms/job_applications?hideTitle=true&prefill[job_posting]=fac3dceb-28b8-472e-8868-7dbdb41a7f33&prefill[how_did_you_hear]=company_website&prefill[years_of_experience]=5"
+        id="directus-form-iframe"
+        allowTransparency="true"
+        scrolling="no">
+      </iframe>
+
+      <div id="form-status" style="display: none;"></div>
+    </div>
+  </div>
+
+  <script>
+  window.addEventListener('message', (event) => {
+    if (event.origin !== 'https://directus-demo.thederf.com') return;
+
+    const statusDiv = document.getElementById('form-status');
+    const iframe = document.getElementById('directus-form-iframe');
+
+    switch (event.data.type) {
+      case 'directus-form-ready':
+        console.log('Form is ready');
+        
+        break;
+
+      case 'directus-form-resize':
+        iframe.style.height = event.data.data.height + 'px';
+        break;
+
+      case 'directus-form-submitted':
+        statusDiv.innerHTML = '✓ Thank you! Your form has been submitted successfully.';
+        statusDiv.className = 'success';
+        statusDiv.style.display = 'block';
+        setTimeout(() => {
+          statusDiv.style.display = 'none';
+        }, 5000);
+        break;
+
+      case 'directus-form-error':
+        statusDiv.innerHTML = '✗ Error: ' + event.data.data.error;
+        statusDiv.className = 'error';
+        statusDiv.style.display = 'block';
+        break;
+
+      case 'directus-form-prefill-applied':
+        console.log('Prefill applied from ' + event.data.data.source + ':', event.data.data.fields);
+        break;
+    }
+  });
+</script>
+</body>
+</html>

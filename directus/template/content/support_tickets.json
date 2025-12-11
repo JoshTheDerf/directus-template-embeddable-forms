@@ -1,0 +1,28 @@
+[
+  {
+    "id": "9b9b2297-3e04-4c85-bc06-9dbb65ca48bf",
+    "ticket_number": "TICK-1002",
+    "customer_name": "James Wilson",
+    "customer_email": "jwilson@example.net",
+    "priority": "medium",
+    "category": "billing",
+    "subject": "Question about recent invoice",
+    "description": "I received my invoice for this month and noticed a charge I don't recognize. Can you help clarify what this is for?",
+    "status": "open",
+    "date_created": "2025-12-09T00:44:28.419Z",
+    "date_updated": null
+  },
+  {
+    "id": "b52fd529-9cbb-4b9f-a392-286517134809",
+    "ticket_number": "TICK-1001",
+    "customer_name": "Emily Rodriguez",
+    "customer_email": "emily.r@company.com",
+    "priority": "high",
+    "category": "technical",
+    "subject": "Login issues after recent update",
+    "description": "I've been unable to log into my account since yesterday's system update. Getting an error message about invalid credentials even though I'm using the correct password.",
+    "status": "in_progress",
+    "date_created": "2025-12-09T00:44:28.416Z",
+    "date_updated": null
+  }
+]

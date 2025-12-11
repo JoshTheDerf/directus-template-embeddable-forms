@@ -1,0 +1,370 @@
+[
+  {
+    "collection": "article_comments",
+    "meta": {
+      "collection": "article_comments",
+      "icon": "comment",
+      "note": "User comments on articles with markdown support",
+      "display_template": "{{author_name}} on {{article_title}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": "status",
+      "archive_app_filter": true,
+      "archive_value": "deleted",
+      "unarchive_value": "published",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": "#8B5CF6",
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": null,
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "name": "article_comments",
+      "sql": "CREATE TABLE \"article_comments\" (`id` char(36) NOT NULL, `article_title` varchar(255) NOT NULL, `author_name` varchar(255) NOT NULL, `author_email` varchar(255) NULL, `author_website` varchar(255) NULL, `comment_body` text NOT NULL, `parent_comment` char(36) NULL, `status` varchar(255) NOT NULL DEFAULT 'pending', `ip_address` varchar(255) NULL, `user_agent` varchar(255) NULL, `sort` integer NULL, `date_created` datetime NULL, `date_updated` datetime NULL, PRIMARY KEY (`id`), CONSTRAINT `article_comments_parent_comment_foreign` FOREIGN KEY (`parent_comment`) REFERENCES `article_comments` (`id`) ON DELETE SET NULL)"
+    }
+  },
+  {
+    "collection": "contact_requests",
+    "meta": {
+      "collection": "contact_requests",
+      "icon": "contact_support",
+      "note": "Customer contact form submissions and support requests. Track inquiries from initial submission through resolution.",
+      "display_template": "{{name}} - {{subject}} ({{status}})",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Contact Requests",
+          "singular": "Contact Request",
+          "plural": "Contact Requests"
+        }
+      ],
+      "archive_field": "status",
+      "archive_app_filter": true,
+      "archive_value": "closed",
+      "unarchive_value": "new",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": "#10B981",
+      "item_duplication_fields": null,
+      "sort": 2,
+      "group": null,
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "name": "contact_requests",
+      "sql": "CREATE TABLE \"contact_requests\" (`id` char(36) NOT NULL, `status` varchar(255) NOT NULL DEFAULT 'new', `name` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `phone` varchar(255) NULL, `company` varchar(255) NULL, `category` varchar(255) NOT NULL, `priority` varchar(255) NULL DEFAULT 'medium', `subject` varchar(255) NOT NULL, `message` text NOT NULL, `internal_notes` text NULL, `sort` integer NULL, `user_created` char(36) NULL, `date_created` datetime NULL, `user_updated` char(36) NULL, `date_updated` datetime NULL, PRIMARY KEY (`id`), CONSTRAINT `contact_requests_user_created_foreign` FOREIGN KEY (`user_created`) REFERENCES `directus_users` (`id`), CONSTRAINT `contact_requests_user_updated_foreign` FOREIGN KEY (`user_updated`) REFERENCES `directus_users` (`id`))"
+    }
+  },
+  {
+    "collection": "event_registrations",
+    "meta": {
+      "collection": "event_registrations",
+      "icon": "app_registration",
+      "note": "Event registration form submissions. Track attendee registrations including dietary needs and special requests.",
+      "display_template": "{{first_name}} {{last_name}} - {{event.title}} ({{status}})",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Event Registrations",
+          "singular": "Event Registration",
+          "plural": "Event Registrations"
+        }
+      ],
+      "archive_field": "status",
+      "archive_app_filter": true,
+      "archive_value": "cancelled",
+      "unarchive_value": "confirmed",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": "#EC4899",
+      "item_duplication_fields": null,
+      "sort": 4,
+      "group": null,
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "name": "event_registrations",
+      "sql": "CREATE TABLE \"event_registrations\" (`id` char(36) NOT NULL, `status` varchar(255) NOT NULL DEFAULT 'confirmed', `event` char(36) NOT NULL, `first_name` varchar(255) NOT NULL, `last_name` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `phone` varchar(255) NULL, `company` varchar(255) NULL, `job_title` varchar(255) NULL, `dietary_requirements` text NULL, `special_requests` text NULL, `ticket_type` varchar(255) NULL DEFAULT 'general', `confirmation_sent` boolean NULL DEFAULT '0', `sort` integer NULL, `date_created` datetime NULL, `date_updated` datetime NULL, PRIMARY KEY (`id`), CONSTRAINT `event_registrations_event_foreign` FOREIGN KEY (`event`) REFERENCES `events` (`id`) ON DELETE CASCADE)"
+    }
+  },
+  {
+    "collection": "events",
+    "meta": {
+      "collection": "events",
+      "icon": "event",
+      "note": "Event catalog for registration forms. Define events with dates, capacity, and details for attendee registration.",
+      "display_template": "{{title}} - {{event_date}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Events",
+          "singular": "Event",
+          "plural": "Events"
+        }
+      ],
+      "archive_field": "status",
+      "archive_app_filter": true,
+      "archive_value": "past",
+      "unarchive_value": "upcoming",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": "#8B5CF6",
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "event_registrations",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "name": "events",
+      "sql": "CREATE TABLE `events` (`id` char(36) not null, `status` varchar(255) not null default 'upcoming', `title` varchar(255) not null, `description` text null, `event_type` varchar(255) null, `event_date` datetime not null, `location` varchar(255) null, `capacity` integer null, `sort` integer null, `date_created` datetime null, `date_updated` datetime null, primary key (`id`))"
+    }
+  },
+  {
+    "collection": "job_applications",
+    "meta": {
+      "collection": "job_applications",
+      "icon": "description",
+      "note": "Job application form submissions. Track candidate applications with resumes, cover letters, and interview status.",
+      "display_template": "{{first_name}} {{last_name}} - {{job_posting.title}} ({{status}})",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Job Applications",
+          "singular": "Job Application",
+          "plural": "Job Applications"
+        }
+      ],
+      "archive_field": "status",
+      "archive_app_filter": true,
+      "archive_value": "rejected",
+      "unarchive_value": "submitted",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": "#EF4444",
+      "item_duplication_fields": null,
+      "sort": 5,
+      "group": null,
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "name": "job_applications",
+      "sql": "CREATE TABLE \"job_applications\" (`id` char(36) NOT NULL, `status` varchar(255) NOT NULL DEFAULT 'submitted', `job_posting` char(36) NOT NULL, `first_name` varchar(255) NOT NULL, `last_name` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `phone` varchar(255) NOT NULL, `resume` char(36) NOT NULL, `cover_letter` char(36) NULL, `linkedin_url` varchar(255) NULL, `portfolio_url` varchar(255) NULL, `years_of_experience` integer NULL, `current_company` varchar(255) NULL, `expected_salary` varchar(255) NULL, `available_start_date` date NULL, `how_did_you_hear` varchar(255) NULL, `additional_info` text NULL, `recruiter_notes` text NULL, `sort` integer NULL, `date_created` datetime NULL, `date_updated` datetime NULL, PRIMARY KEY (`id`), CONSTRAINT `job_applications_job_posting_foreign` FOREIGN KEY (`job_posting`) REFERENCES `job_postings` (`id`) ON DELETE CASCADE, CONSTRAINT `job_applications_resume_foreign` FOREIGN KEY (`resume`) REFERENCES `directus_files` (`id`) ON DELETE SET NULL, CONSTRAINT `job_applications_cover_letter_foreign` FOREIGN KEY (`cover_letter`) REFERENCES `directus_files` (`id`) ON DELETE SET NULL)"
+    }
+  },
+  {
+    "collection": "job_postings",
+    "meta": {
+      "collection": "job_postings",
+      "icon": "work",
+      "note": "Job posting catalog for career pages. Define open positions with requirements and descriptions for application forms.",
+      "display_template": "{{title}} - {{department}} ({{status}})",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Job Postings",
+          "singular": "Job Posting",
+          "plural": "Job Postings"
+        }
+      ],
+      "archive_field": "status",
+      "archive_app_filter": true,
+      "archive_value": "closed",
+      "unarchive_value": "open",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": "#F59E0B",
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "job_applications",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "name": "job_postings",
+      "sql": "CREATE TABLE `job_postings` (`id` char(36) not null, `status` varchar(255) not null default 'draft', `title` varchar(255) not null, `department` varchar(255) null, `location` varchar(255) null, `employment_type` varchar(255) null, `experience_level` varchar(255) null, `description` text null, `sort` integer null, `date_created` datetime null, `date_updated` datetime null, primary key (`id`))"
+    }
+  },
+  {
+    "collection": "lead_captures",
+    "meta": {
+      "collection": "lead_captures",
+      "icon": "psychology",
+      "note": "Marketing lead capture forms with UTM tracking and attribution. Convert website visitors into qualified sales leads.",
+      "display_template": "{{first_name}} {{last_name}} - {{company}} ({{status}})",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Lead Captures",
+          "singular": "Lead Capture",
+          "plural": "Lead Captures"
+        }
+      ],
+      "archive_field": "status",
+      "archive_app_filter": true,
+      "archive_value": "disqualified",
+      "unarchive_value": "new",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": "#06B6D4",
+      "item_duplication_fields": null,
+      "sort": 6,
+      "group": null,
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "name": "lead_captures",
+      "sql": "CREATE TABLE \"lead_captures\" (`id` char(36) NOT NULL, `status` varchar(255) NOT NULL DEFAULT 'new', `first_name` varchar(255) NOT NULL, `last_name` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `phone` varchar(255) NULL, `company` varchar(255) NOT NULL, `job_title` varchar(255) NULL, `company_size` varchar(255) NULL, `industry` varchar(255) NULL, `interest` varchar(255) NOT NULL, `message` text NULL, `utm_source` varchar(255) NULL, `utm_medium` varchar(255) NULL, `utm_campaign` varchar(255) NULL, `utm_term` varchar(255) NULL, `utm_content` varchar(255) NULL, `landing_page` varchar(255) NULL, `referrer` varchar(255) NULL, `lead_score` integer NULL DEFAULT '0', `assigned_to` char(36) NULL, `sales_notes` text NULL, `sort` integer NULL, `user_created` char(36) NULL, `date_created` datetime NULL, `user_updated` char(36) NULL, `date_updated` datetime NULL, PRIMARY KEY (`id`), CONSTRAINT `lead_captures_user_created_foreign` FOREIGN KEY (`user_created`) REFERENCES `directus_users` (`id`), CONSTRAINT `lead_captures_user_updated_foreign` FOREIGN KEY (`user_updated`) REFERENCES `directus_users` (`id`), CONSTRAINT `lead_captures_assigned_to_foreign` FOREIGN KEY (`assigned_to`) REFERENCES `directus_users` (`id`) ON DELETE SET NULL)"
+    }
+  },
+  {
+    "collection": "newsletter_signups",
+    "meta": {
+      "collection": "newsletter_signups",
+      "icon": "mail",
+      "note": "Newsletter subscription management with subscriber preferences and tracking. Monitor email list growth and engagement.",
+      "display_template": "{{email}} - {{status}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Newsletter Signups",
+          "singular": "Newsletter Signup",
+          "plural": "Newsletter Signups"
+        }
+      ],
+      "archive_field": "status",
+      "archive_app_filter": true,
+      "archive_value": "unsubscribed",
+      "unarchive_value": "subscribed",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": "#3B82F6",
+      "item_duplication_fields": null,
+      "sort": 7,
+      "group": null,
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "name": "newsletter_signups",
+      "sql": "CREATE TABLE `newsletter_signups` (`id` char(36) not null, `status` varchar(255) not null default 'pending', `email` varchar(255) not null, `first_name` varchar(255) null, `last_name` varchar(255) null, `interests` json null, `source` varchar(255) null, `sort` integer null, `date_created` datetime null, `date_updated` datetime null, primary key (`id`))"
+    }
+  },
+  {
+    "collection": "quote_requests",
+    "meta": {
+      "collection": "quote_requests",
+      "icon": "request_quote",
+      "note": "Business quote and proposal requests",
+      "display_template": "{{company_name}} - {{service_type}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": "status",
+      "archive_app_filter": true,
+      "archive_value": "declined",
+      "unarchive_value": "new",
+      "sort_field": null,
+      "accountability": "all",
+      "color": "#F59E0B",
+      "item_duplication_fields": null,
+      "sort": 9,
+      "group": null,
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "name": "quote_requests",
+      "sql": "CREATE TABLE `quote_requests` (`id` char(36) not null, `company_name` varchar(255) not null, `contact_person` varchar(255) not null, `email` varchar(255) not null, `phone` varchar(255) null, `service_type` varchar(255) not null, `budget_range` varchar(255) null, `project_description` text not null, `timeline` varchar(255) null, `status` varchar(255) not null default 'new', `date_created` datetime null, primary key (`id`))"
+    }
+  },
+  {
+    "collection": "support_tickets",
+    "meta": {
+      "collection": "support_tickets",
+      "icon": "support_agent",
+      "note": "Customer support ticket system for tracking issues and requests",
+      "display_template": "{{ticket_number}} - {{subject}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": "status",
+      "archive_app_filter": true,
+      "archive_value": "closed",
+      "unarchive_value": "open",
+      "sort_field": null,
+      "accountability": "all",
+      "color": "#3B82F6",
+      "item_duplication_fields": null,
+      "sort": 10,
+      "group": null,
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "name": "support_tickets",
+      "sql": "CREATE TABLE `support_tickets` (`id` char(36) not null, `ticket_number` varchar(255) null, `customer_name` varchar(255) not null, `customer_email` varchar(255) not null, `priority` varchar(255) not null default 'medium', `category` varchar(255) null, `subject` varchar(255) not null, `description` text not null, `status` varchar(255) not null default 'open', `date_created` datetime null, `date_updated` datetime null, primary key (`id`))"
+    }
+  },
+  {
+    "collection": "survey_responses",
+    "meta": {
+      "collection": "survey_responses",
+      "icon": "poll",
+      "note": "Customer satisfaction survey responses and feedback",
+      "display_template": "{{survey_name}} - Rating: {{satisfaction_rating}}/5",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": "#14B8A6",
+      "item_duplication_fields": null,
+      "sort": 11,
+      "group": null,
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "name": "survey_responses",
+      "sql": "CREATE TABLE `survey_responses` (`id` char(36) not null, `survey_name` varchar(255) not null, `respondent_email` varchar(255) null, `satisfaction_rating` integer not null, `would_recommend` boolean null default '0', `feedback` text null, `improvement_suggestions` text null, `date_submitted` datetime null, primary key (`id`))"
+    }
+  }
+]
