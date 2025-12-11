@@ -217,6 +217,34 @@ This allows schema access while blocking data reads.
 
 **Local Demos**: After installation, access at `https://your-directus-url/dirserve/index.html`
 
+## Screenshots
+
+### Demo Index Page
+![Demo index page showing all available forms](screenshots/form-demo-index-page.png)
+
+**Demo index page showing all demo forms**
+
+
+### Event Registration Form Example
+![Event registration form embedded in a demo page](screenshots/form-demo-event-registration.png)
+
+**Event registration form embedded in a demo page**
+
+### Contact Form Example
+![Contact form example](screenshots/from-raw-contact.png)
+
+**Contact form example as it appears prior to embedding**
+
+### Backend Submitted Data
+![Submitted form data visible in Directus backend](screenshots/form-backend-submitted.png)
+
+**Submitted form data visible in Directus backend**
+
+### Extension Documentation
+![Extension documentation in Directus](screenshots/extension-docs.png)
+
+**Extension documentation in Directus**
+
 ## Project Structure
 
 ```

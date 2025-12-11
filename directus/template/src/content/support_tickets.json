@@ -24,18 +24,5 @@
     "status": "in_progress",
     "date_created": "2025-12-09T00:44:28.416Z",
     "date_updated": null
-  },
-  {
-    "id": "ec38767c-b665-4bc1-8df5-4ec90987f87f",
-    "ticket_number": null,
-    "customer_name": "John Doe",
-    "customer_email": "john@example.com",
-    "priority": "medium",
-    "category": "technical",
-    "subject": "Issue with form submission",
-    "description": "The form submission system isn't working.",
-    "status": "open",
-    "date_created": "2025-12-11T02:19:47.440Z",
-    "date_updated": null
   }
 ]
