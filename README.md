@@ -112,6 +112,32 @@ npx directus-template-cli@latest apply [CONNECTION_PARAMETERS] ./directus/templa
 8. **survey_responses** - Satisfaction surveys with ratings
 9. **article_comments** - Blog comments with markdown
 
+## Demo
+
+**Live Demo**: [https://directus-demo.thederf.com/dirserve/](https://directus-demo.thederf.com/dirserve/)
+
+**Video Walkthrough**: [Watch on YouTube](https://www.youtube.com/watch?v=6DcpQy0i9vA)
+
+**Local Demos**: After installation, access at `https://your-directus-url/dirserve/index.html`
+
+## Screenshots
+
+### Index page showing all demo forms
+![Demo index page showing all available forms](screenshots/form-demo-index-page.png)
+
+### Event registration form embedding example
+![Event registration form embedded in a demo page](screenshots/form-demo-event-registration.png)
+
+### Contact form as it appears prior to embedding
+![Contact form example](screenshots/from-raw-contact.png)
+
+### Submitted form data visible in Directus backend
+![Submitted form data visible in Directus backend](screenshots/form-backend-submitted.png)
+
+### Extension documentation in Directus Admin App
+![Extension documentation in Directus](screenshots/extension-docs.png)
+
+
 ## Usage
 
 ### Basic Embedding
@@ -208,42 +234,6 @@ This allows schema access while blocking data reads.
 - `directus_relations`
 
 **File uploads**: Grant Public role create permission on `directus_files` with appropriate folder restrictions.
-
-## Demo
-
-**Live Demo**: [https://directus-demo.thederf.com/dirserve/](https://directus-demo.thederf.com/dirserve/)
-
-**Video Walkthrough**: [Watch on YouTube](https://www.youtube.com/watch?v=6DcpQy0i9vA)
-
-**Local Demos**: After installation, access at `https://your-directus-url/dirserve/index.html`
-
-## Screenshots
-
-### Demo Index Page
-![Demo index page showing all available forms](screenshots/form-demo-index-page.png)
-
-**Demo index page showing all demo forms**
-
-
-### Event Registration Form Example
-![Event registration form embedded in a demo page](screenshots/form-demo-event-registration.png)
-
-**Event registration form embedded in a demo page**
-
-### Contact Form Example
-![Contact form example](screenshots/from-raw-contact.png)
-
-**Contact form example as it appears prior to embedding**
-
-### Backend Submitted Data
-![Submitted form data visible in Directus backend](screenshots/form-backend-submitted.png)
-
-**Submitted form data visible in Directus backend**
-
-### Extension Documentation
-![Extension documentation in Directus](screenshots/extension-docs.png)
-
-**Extension documentation in Directus**
 
 ## Project Structure
 
